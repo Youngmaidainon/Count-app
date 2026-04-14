@@ -8,6 +8,7 @@ function updateCount() {
     if (count > 0) countEl.style.color = "green";
     else if (count < 0) countEl.style.color = "red";
     else countEl.style.color = "black";
+    localStorage.setItem('count', count); // บันทึกทุกครั้งที่ค่าเปลี่ยน
 }
 
 // เพิ่มขึ้นทีละ 5
@@ -26,4 +27,13 @@ document.getElementById("decrease").addEventListener("click", () => {
 document.getElementById("reset").addEventListener("click", () => {
     count = 0;
     updateCount();
+});
+
+// โหลดค่าจาก localStorage ตอน refresh
+window.addEventListener('load', () => {
+    const saved = localStorage.getItem('count');
+    if (saved !== null) { // เช็ค null กรณีที่พลาดเป็น 0
+        count = Number(saved); // แปลง String → Number
+        updateCount();
+    }
 });
