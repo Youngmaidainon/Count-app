@@ -20,6 +20,7 @@ document.getElementById("increase").addEventListener("click", () => {
 // ลดลงทีละ 5
 document.getElementById("decrease").addEventListener("click", () => {
     count -= 5;
+    count = Math.max(0 , count); // กำหนดให้ไม่ต่ำกว่า 0 เวลากดลบ
     updateCount();
 });
 
