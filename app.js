@@ -6,7 +6,6 @@ const countEl = document.getElementById("count");
 function updateCount() {
     countEl.textContent = count; //เปลี่ยนข้อความที่แสดงอยู่บนหน้าเว็บไซต์แบบ Real-time
     if (count > 0) countEl.style.color = "green";
-    else if (count < 0) countEl.style.color = "red";
     else countEl.style.color = "black";
     localStorage.setItem('count', count); // บันทึกทุกครั้งที่ค่าเปลี่ยน
 }
