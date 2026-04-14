@@ -10,15 +10,15 @@ function updateCount() {
     else countEl.style.color = "black";
 }
 
-// เพิ่มขึ้นทีละ 1
+// เพิ่มขึ้นทีละ 5
 document.getElementById("increase").addEventListener("click", () => {
-    count ++;
+    count += 5;
     updateCount();
 });
 
-// ลดลงทีละ 1
+// ลดลงทีละ 5
 document.getElementById("decrease").addEventListener("click", () => {
-    count --;
+    count -= 5;
     updateCount();
 });
 
