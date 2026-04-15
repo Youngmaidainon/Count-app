@@ -26,7 +26,7 @@ count-app/
 
 ```bash
 # Clone repo
-git clone https://github.com/your-username/count-app.git
+git clone https://github.com/Youngmaidainon/Count-app
 
 # เปิดไฟล์ในเบราว์เซอร์
 open index.html
